@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: aliceblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h4>Thee current count is</h4>
+        <h1 id="count">0</h1>
+        <button id="subtract">-</button>
+        <button id="add">+</button>
+    </div>
+
+    <script>
+        const btnAdd = document.querySelector('#add')
+        const btnSub = document.querySelector('#subtract')
+        const count = document.querySelector('#count')
+        let countVal = 0
+        count.innerHTML = countVal
+
+        btnAdd.addEventListener('click', e => {
+            countVal++
+            count.innerHTML = countVal
+        })
+
+        btnSub.addEventListener('click', e => {
+            countVal--
+            count.innerHTML = countVal
+        })
+
+
+    </script>
+</body>
+</html>
